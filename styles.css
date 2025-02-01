@@ -1,0 +1,49 @@
+h3 {
+    color: white;
+    padding: 10px 15px; 
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: limegreen;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link:visited {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+    color: limegreen;
+}
+
+.card-with-image {
+position: relative;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 10px;
+}
+
+.card-with-image .card {
+position: absolute; /* Adiciona esta linha */
+top: 150px; /* Ajuste conforme necessário */
+left: 50px; /* Ajuste conforme necessário */
+z-index: 1; /* Certifique-se de que o card fique acima da imagem */
+width: 40%; /* Ajuste a largura conforme necessário */
+background-color: rgba(0, 0, 0, 0.945); /* Adiciona um fundo semitransparente */
+color: white; /* Adiciona a cor do texto */
+padding: 15px; /* Adiciona um pouco de espaçamento interno */
+border-radius: 8px; /* Ajusta as bordas */
+}
+.card-with-image img {
+max-width: 40%; /* Altere esta porcentagem conforme necessário */
+height: auto;
+border-radius: 8px;
+}
