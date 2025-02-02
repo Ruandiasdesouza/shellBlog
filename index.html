@@ -1,15 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="/terminal.png">
-    <title>Shel Blog</title>
+    <title>Shell Blog</title>
+    <style>
+        /* Estilos globais */
+        html, body {
+            height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Container principal */
+        .container {
+            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Espaçamento interno */
+            background-color: #f4f4f4; /* Cor de fundo para o conteúdo */
+        }
+
+        /* Estilo para o terminal */
+        .terminal {
+            width: 80%;
+            max-width: 800px;
+            background-color: #1e1e1e;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .button.close {
+            background-color: #ff5f56;
+        }
+
+        .button.minimize {
+            background-color: #ffbd2e;
+        }
+
+        .button.maximize {
+            background-color: #27c93f;
+        }
+
+        .title {
+            color: #00ff00;
+            font-size: 0.9em;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .command {
+            margin: 0;
+        }
+
+        /* Estilo para o rodapé */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #00ff00;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h3>Shell Blog</h3>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,31 +137,44 @@
                     <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@ShellBlog">YouTube</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
+    <!-- Conteúdo principal -->
     <div class="container">
-        <div class="card-with-image">
-            <img src="terminal Linux com painel desfocado, sem o PC.png" alt="Imagem ao lado do card">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">NÃO SABE O QUE PROCURA?</h5>
-                    <p class="card-text">Para quem não sabe o que busca, todos os resultados são válidos.</p>
-                    <p class="card-text"> Clique aqui para ver todas as publicações recentes do blog</p>
-                    <a href="#" class="btn btn-primary">VER POSTS</a>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="buttons">
+                    <span class="button close"></span>
+                    <span class="button minimize"></span>
+                    <span class="button maximize"></span>
                 </div>
+                <div class="title">Terminal</div>
+            </div>
+            <div class="terminal-body">
+                <p class="command" id="command1">user@linux: Conectando....</p>
+                <p class="command" id="command2">user@linux: Bem-vindo</p>
+		<p class="command" id="command3">user@linux: <i>SHELL_BLOG</i></p>
             </div>
         </div>
     </div>
-    
-    <!-- Codigo PHP -->
-    <?php
 
-    ?>
-
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Direitos reservados &copy; 2025</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Serviço</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </body>
 </html>

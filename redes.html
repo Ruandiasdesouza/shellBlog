@@ -6,10 +6,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="/terminal.png">
-    <title>Shel Blog</title>
-</head>
+    <title>Shell Blog</title>
+    <style>
+        /* Estilos globais */
+        html, body {
+            height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
+        /* Container principal */
+        #campo-do-texto {
+            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+            padding: 20px;
+            background-color: #f4f4f4; /* Cor de fundo para o conteúdo */
+        }
+
+        /* Estilo para o rodapé */
+        .footer {
+            background-color: #333; /* Fundo escuro */
+            color: white; /* Texto branco */
+            text-align: center;
+            padding: 20px 0; /* Espaçamento interno */
+            border-top: 2px solid #00ff00; /* Borda superior verde */
+            width: 100%; /* Garante que o rodapé ocupe toda a largura */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links a {
+            color: #00ff00; /* Texto verde */
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease; /* Transição suave de cor */
+        }
+
+        .footer-links a:hover {
+            color: #ffffff; /* Texto branco ao passar o mouse */
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
+    </style>
+</head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h3>Shell Blog</h3>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,18 +74,34 @@
                     <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@ShellBlog">YouTube</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    
-    <!-- Codigo PHP -->
-    <?php
+    <!-- Conteúdo principal -->
+    <div id="campo-do-texto">
+        <br>
+        <pre>
+	CARREGANDO
+       </pre>
 
-    ?>
+        <br>
+    </div>
 
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Direitos reservados &copy; 2025</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Serviço</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
