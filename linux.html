@@ -7,57 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="/terminal.png">
     <title>Shell Blog</title>
-    <style>
-        /* Estilos globais */
-        html, body {
-            height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-	section h3 {
-	color: black;
-	}
-        /* Container principal */
-        #campo-do-texto {
-            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
-            padding: 20px;
-            background-color: #f4f4f4; /* Cor de fundo para o conteúdo */
-        }
-
-        /* Estilo para o rodapé */
-        .footer {
-            background-color: #333; /* Fundo escuro */
-            color: white; /* Texto branco */
-            text-align: center;
-            padding: 20px 0; /* Espaçamento interno */
-            border-top: 2px solid #00ff00; /* Borda superior verde */
-            width: 100%; /* Garante que o rodapé ocupe toda a largura */
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-links a {
-            color: #00ff00; /* Texto verde */
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease; /* Transição suave de cor */
-        }
-
-        .footer-links a:hover {
-            color: #ffffff; /* Texto branco ao passar o mouse */
-            text-decoration: underline; /* Sublinhado ao passar o mouse */
-        }
-    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h3>Shell Blog</h3>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Shell Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -81,6 +38,7 @@
         </div>
     </nav>
 
+
     <!-- Conteúdo principal -->
     <div id="campo-do-texto">
         <br>
@@ -90,66 +48,78 @@
 	<ul>
 	   <li><a href="#Linux_e_seu desenvolvimento">Um pouco sobre linux antes das linhas de comando</a></li>
            <li><a href="#terminal">Terminal, comando e afins</a></li>
-           <li><a href="#sistemas_de_aquivos">Sistemas de arquivos</a></li>
+           <li><a href="#diretorio">Sistemas de arquivos</a></li>
         </ul>
 
 	<section id="#Linux_e_seu desenvolvimento">
-        <pre>
+      
 <h3>Linux Kernel</h3>
 O site Oficial do Linux Kernel é URL: https://www.kernel.org, onde você encontra versões estáveis do kernel Linux, documentação técnica,
 informações sobre como contribuir para o desenvolvimento do kernel e links para repositórios Git.
 <h3>Distribuições Linux</h3>
 Como o Linux é um kernel, ele é usado por diversas distribuições Linux, que são sistemas operacionais completos baseados no kernel Linux.
 Cada distribuição tem seu próprio site oficial, sendo os mais conhecidos pela comunidade:
+<br>
 Ubuntu:
 Site: https://ubuntu.com
 Uma das distribuições mais populares, focada em facilidade de uso.
+<br>
 Debian:
 Site: https://www.debian.org
 Conhecida por sua estabilidade e base para muitas outras distribuições, incluindo o Ubuntu.
+<br>
 Fedora:
 Site: https://getfedora.org
 Distribuição patrocinada pela Red Hat, com foco em inovação.
+<br>
 Arch Linux:
 Site: https://www.archlinux.org
 Distribuição minimalista e altamente personalizável.
+<br>
 Linux Mint:
 Site: https://linuxmint.com
 Baseado no Ubuntu, é conhecido por ser amigável para iniciantes.
+<br>
 CentOS:
 Site: https://www.centos.org
 Focado em servidores e compatível com o Red Hat Enterprise Linux (RHEL) porém, o CentOS Linux foi descontinuado em 30 de junho de 2024
 com o fim da vida útil da versão 7.
+<br>
 openSUSE:
 Site: https://www.opensuse.org
 Distribuição poderosa e versátil, com foco em estabilidade e facilidade de uso.
 Uma recomendação de leitura que dou além da documentação oficial do sistema operacional de sua escolha é o livro, Linux Bible
-           </pre>
-           <a href="#inicio">voltar</a>
+
+           <br><a href="#inicio">voltar</a>
 
 	<section id="terminal">
             <h3>Terminal, comandos e afins</h3>
-            <pre>
+            
 Neste momento, assumo que você já seja um usuário Linux e queira ser menos dependente da interface gráfica. Por isso, agora vamos ter uma conversa
 sobre os únicos comandos que você deve se preocupar em aprender a usar neste momento inicial:
+<br>
 man: O comando serve para fornecer informações sobre comandos.
-Exemplo: man man.         
+Exemplo: man man.
+<br>         
 help: O comando ajuda com comandos e opções disponíveis de algum aplicativo, semelhante ao comando man, porém decidi citá-lo separadamente.
 Exemplo: ls --help.             
+<br>
 cd: O comando é usado para navegar pelos diretórios do sistema.
 Exemplo: cd ./ para voltar à raiz do diretório.               
+<br>
 ls: O comando lista os arquivos no diretório atual em que você se encontra.                
-Com esses comandos, você poderá ter uma autonomia maior, permitindo remover um pouco o medo/dificuldade das linhas de comando que alguns usuários têm.
-Veja que aqui já dou a chance de você usar o 'pouco' que dei para ler e fazer sozinho. Não dependa 100% do que deixo ou não de escrever. Além do mais
-por ser uma lista vasta de comandos e assumindo que você é uma pessoa funcional, não vamos perder tempo com o trivial do básico.
-            </pre>
- 	    <a href="#inicio">voltar</a>
+Com esses comandos simples você poderá ter uma autonomia maior, permitindo remover um pouco o medo/dificuldade das linhas de comando que alguns
+usuários têm. Veja que aqui já dou a chance de você usar o 'pouco' que dei para ler e fazer sozinho. Não dependa 100% do que deixo ou não de
+escrever. Além do mais por ser uma lista vasta de comandos, não vamos perder tempo escrevendo o básico que se encontra dentro do seu sitema.
+            
+ 	   <br> <a href="#inicio">voltar</a>
        </section>
 	
-	<section id="sistemas_de_arquivos">
+	<section id="diretorio">
             <h3>Sistemas de arquivos</h3>
-            <p>Vamos conversar um pouco sobre os Sistemas de Pastas no linux</p>
- 	    <a href="#inicio">voltar</a>
+            Vamos conversar um pouco sobre os Sistemas de Pastas no linux
+
+ 	    <br><a href="#inicio">voltar</a>
        </section>
     </div>
 
@@ -159,5 +129,8 @@ por ser uma lista vasta de comandos e assumindo que você é uma pessoa funciona
             <p>Direitos reservados &copy; 2025</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX38jF0jFr6J8Qk5Y5J6f5p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,11 +1,20 @@
-h3 {
-    color: white;
-    padding: 10px 15px; 
+/* Estilos globais */
+html, body {
+    height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
 }
+
+
+/* Navbar */
 .navbar-dark .navbar-nav .nav-link {
-    color: white; 
-    font-weight: bold; 
-    padding: 10px 15px; 
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -22,58 +31,135 @@ h3 {
     color: limegreen;
 }
 
-/* Estilo para o container principal */
+/* Container principal */
 .container {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Adicione esta linha */
-    color: #00ff00;
-    font-family: 'Courier New', monospace;
-    padding: 20px; /* Adicione um pouco de espaço interno */
-}
-/* Estilo para o rodapé */
-footer {
-    background-color: #1e1e1e; /* Fundo escuro */
-    color: white; /* Texto branco */
-    text-align: center;
-    padding: 20px 0; /* Espaçamento interno */
-    border-top: 2px solid #00ff00; /* Borda superior verde */
-    font-family: 'Arial', sans-serif;
-    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    padding: 20px;
 }
 
-/* Container do conteúdo do rodapé */
+/* Terminal */
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    background-color: #1e1e1e;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    border-bottom: 1px solid #00ff00;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.button.close {
+    background-color: #ff5f56;
+}
+
+.button.minimize {
+    background-color: #ffbd2e;
+}
+
+.button.maximize {
+    background-color: #27c93f;
+}
+
+.title {
+    color: #00ff00;
+    font-size: 0.9em;
+}
+
+.terminal-body {
+    padding: 20px;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+}
+
+.command {
+    margin: 0;
+}
+/* Estilo para a div campo-do-texto */
+#campo-do-texto {
+    color: #00ff00; /* Texto verde dentro da div */
+    padding: 20px; /* Espaçamento interno */
+    font-family: 'Courier New', monospace; /* Fonte monoespaçada */
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #00ff00;
+    width: 100%;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilo para o texto de direitos reservados */
-.footer-content p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #cccccc; /* Texto cinza claro */
-}
-
-/* Estilo para os links do rodapé */
-.footer-links {
-    margin-top: 10px;
-}
-
 .footer-links a {
-    color: #00ff00; /* Texto verde */
+    color: #00ff00;
     text-decoration: none;
-    font-size: 0.9em;
     margin: 0 10px;
-    transition: color 0.3s ease; /* Transição suave de cor */
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #ffffff; /* Texto branco ao passar o mouse */
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    color: #ffffff;
+    text-decoration: underline;
 }
-#campo-do-texto {
-	align-items: center;
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .terminal {
+        width: 95%;
+    }
+
+    .terminal-body {
+        padding: 10px;
+    }
+
+    .command {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .terminal-body {
+        padding: 5px;
+    }
+
+    .command {
+        font-size: 0.8em;
+    }
 }

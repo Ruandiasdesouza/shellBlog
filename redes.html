@@ -7,55 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="/terminal.png">
     <title>Shell Blog</title>
-    <style>
-        /* Estilos globais */
-        html, body {
-            height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Container principal */
-        #campo-do-texto {
-            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
-            padding: 20px;
-            background-color: #f4f4f4; /* Cor de fundo para o conteúdo */
-        }
-
-        /* Estilo para o rodapé */
-        .footer {
-            background-color: #333; /* Fundo escuro */
-            color: white; /* Texto branco */
-            text-align: center;
-            padding: 20px 0; /* Espaçamento interno */
-            border-top: 2px solid #00ff00; /* Borda superior verde */
-            width: 100%; /* Garante que o rodapé ocupe toda a largura */
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-links a {
-            color: #00ff00; /* Texto verde */
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease; /* Transição suave de cor */
-        }
-
-        .footer-links a:hover {
-            color: #ffffff; /* Texto branco ao passar o mouse */
-            text-decoration: underline; /* Sublinhado ao passar o mouse */
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h3>Shell Blog</h3>
+        <a class="navbar-brand" href="#">Shell Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -79,14 +38,12 @@
         </div>
     </nav>
 
+
     <!-- Conteúdo principal -->
     <div id="campo-do-texto">
-        <br>
-        <pre>
-	CARREGANDO
-       </pre>
 
-        <br>
+	CARREGANDO
+
     </div>
 
     <!-- Rodapé -->
@@ -95,5 +52,9 @@
             <p>Direitos reservados &copy; 2025</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX38jF0jFr6J8Qk5Y5J6f5p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

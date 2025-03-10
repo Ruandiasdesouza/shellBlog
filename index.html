@@ -4,154 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="/terminal.png">
     <title>Shell Blog</title>
-    <style>
-        /* Estilos globais */
-        html, body {
-            height: 100%; /* Garante que o HTML e o body ocupem 100% da altura da tela */
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        h3 {
-        color: white;
-        padding: 10px 15px; 
-    }
-    .navbar-dark .navbar-nav .nav-link {
-    color: white; 
-    font-weight: bold; 
-    padding: 10px 15px; 
-    transition: color 0.3s, background-color 0.3s;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: limegreen;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-dark .navbar-nav .nav-link:visited {
-    color: white;
-}
-
-.navbar-dark .navbar-nav .nav-link:active {
-    color: limegreen;
-}
-
-/* Estilo para o container principal */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1; /* Adicione esta linha */
-    color: #00ff00;
-    font-family: 'Courier New', monospace;
-    padding: 20px; /* Adicione um pouco de espaço interno */
-}
-
-        /* Container principal */
-        .container {
-            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px; /* Espaçamento interno */
-            background-color: #f4f4f4; /* Cor de fundo para o conteúdo */
-        }
-
-        /* Estilo para o terminal */
-        .terminal {
-            width: 80%;
-            max-width: 800px;
-            background-color: #1e1e1e;
-            border: 2px solid #00ff00;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-        }
-
-        .terminal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #333;
-            border-bottom: 1px solid #00ff00;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 5px;
-        }
-
-        .button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .button.close {
-            background-color: #ff5f56;
-        }
-
-        .button.minimize {
-            background-color: #ffbd2e;
-        }
-
-        .button.maximize {
-            background-color: #27c93f;
-        }
-
-        .title {
-            color: #00ff00;
-            font-size: 0.9em;
-        }
-
-        .terminal-body {
-            padding: 20px;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-        }
-
-        .command {
-            margin: 0;
-        }
-
-        /* Estilo para o rodapé */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 2px solid #00ff00;
-            width: 100%;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-links a {
-            color: #00ff00;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-    </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h3>Shell Blog</h3>
+        <a class="navbar-brand" href="#">Shell Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -187,10 +50,10 @@
                 <div class="title">Terminal</div>
             </div>
             <div class="terminal-body">
-                <p class="command" id="command1">user@linux: Conectando....</p>
-                <p class="command" id="command2">user@linux: Bem-vindo</p>
+                <p class="command" id="command1">Conectando....</p>
+                <p class="command" id="command2">Bem-vindo</p>
                 <p class="command" id="command3">
-                    user@linux: Olá, meu nome é Ruan. Sou formado como Técnico em Manutenção e Suporte em Informática pelo
+                    Olá, meu nome é Ruan. Sou formado como Técnico em Manutenção e Suporte em Informática pelo
                     Instituto Federal de Brasília, onde tive meu primeiro contato aprofundado com redes e sistemas
                     operacionais, desenvolvendo um certo carinho pelo sistema Linux. Neste blog pessoal
                     compartilharei ferramentas que utilizo, projetos que desenvolvo no ambiente Linux e
@@ -209,8 +72,27 @@
         </div>
     </footer>
 
-    <!-- Script para controlar o tempo das mensagens -->
+    <!-- Scripts do Bootstrap e personalizado -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX38jF0jFr6J8Qk5Y5J6f5p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
+        // Função para animação de digitação
+        function typeWriter(element, text, speed, callback) {
+            let i = 0;
+            element.innerHTML = ""; // Limpa o conteúdo antes de começar
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            type();
+        }
+
         // Função para controlar a exibição das mensagens
         function exibirMensagens() {
             const command1 = document.getElementById('command1');
@@ -222,22 +104,25 @@
             command2.style.display = 'none';
             command3.style.display = 'none';
 
-            // Exibe a primeira mensagem
+            // Exibe a primeira mensagem com animação de digitação
             setTimeout(() => {
                 command1.style.display = 'block';
-            }, 1000); // Após 1 segundo
-
-            // Oculta a primeira mensagem e exibe a segunda
-            setTimeout(() => {
-                command1.style.display = 'none';
-                command2.style.display = 'block';
-            }, 4000); // Após 4 segundos
-
-            // Oculta a segunda mensagem e exibe o texto final
-            setTimeout(() => {
-                command2.style.display = 'none';
-                command3.style.display = 'block';
-            }, 7000); // Após 7 segundos
+                typeWriter(command1, "Conectando....", 100, () => {
+                    // Após a primeira mensagem, exibe a segunda
+                    setTimeout(() => {
+                        command1.style.display = 'none';
+                        command2.style.display = 'block';
+                        typeWriter(command2, "Bem-vindo", 100, () => {
+                            // Após a segunda mensagem, exibe o texto final
+                            setTimeout(() => {
+                                command2.style.display = 'none';
+                                command3.style.display = 'block';
+                                typeWriter(command3, command3.textContent, 50);
+                            }, 2000); // Aguarda 2 segundos antes de exibir o texto final
+                        });
+                    }, 2000); // Aguarda 2 segundos antes de exibir a segunda mensagem
+                });
+            }, 1000); // Inicia após 1 segundo
         }
 
         // Executa a função ao carregar a página
